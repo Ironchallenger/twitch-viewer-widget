@@ -2,30 +2,35 @@ body {
     margin: 0;
     padding: 0;
     background: transparent;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .viewer-count {
     display: flex;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px 20px;
-    border-radius: 25px;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
-    border: 2px solid #00ffff;
+    align-items: center; /* Vertically center logo and count */
+    background: rgba(20, 0, 40, 0.8); /* Dark purple background */
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid #9146FF; /* Twitch purple */
+    box-shadow: 0 0 15px rgba(145, 70, 255, 0.5);
 }
 
-.label {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 10px;
-    text-transform: uppercase;
+.twitch-logo {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    margin-right: 10px; /* Space between logo and count */
 }
 
 .count {
-    color: #00ffff;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 0 0 5px #00ffff;
+    color: #9146FF;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0 0 8px #9146FF;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
