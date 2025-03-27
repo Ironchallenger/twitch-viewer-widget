@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    font-family: 'Arial', sans-serif;
+}
+
+.viewer-count {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    border: 2px solid #00ffff;
+}
+
+.label {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+
+.count {
+    color: #00ffff;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ffff;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Viewer Count</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="viewer-count">
+        <span class="label">Viewers:</span>
+        <span class="count" id="viewer-number">0</span>
+    </div>
+
+    <script>
+        async function fetchViewerCount() {
+            try {
+                const response = await fetch('https://twitch-viewer-backend.vercel.app/viewer-count'); // Replace with your Vercel URL
+                const data = await response.json();
+                updateViewerCount(data.viewer_count);
+            } catch (error) {
+                console.error('Error:', error);
+                updateViewerCount(0);
+            }
+        }
+
+        function updateViewerCount(count) {
+            document.getElementById('viewer-number').textContent = count;
+        }
+
+        setInterval(fetchViewerCount, 10000); // Updates every 10 seconds
+        fetchViewerCount(); // Initial call
+    </script>
+</body>
+</html>
