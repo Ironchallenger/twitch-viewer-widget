@@ -5,11 +5,12 @@ body {
     font-family: 'Orbitron', sans-serif;
 }
 
+
 .viewer-count {
-    display: flex;
+    display: inline-flex; /* Hugs content, expands with width */
     align-items: center;
     background: rgba(20, 0, 40, 0.8);
-    padding: 10px 15px;
+    padding: 10px; /* Vertical padding only, minimal horizontal */
     border-radius: 10px;
     border: 2px solid #9146FF;
     box-shadow: 0 0 15px rgba(145, 70, 255, 0.5);
@@ -37,6 +38,7 @@ body {
     font-weight: 700;
     text-shadow: 0 0 8px #9146FF;
     animation: pulse 1.5s infinite;
+    padding-right: 10px; /* Small right padding for breathing room */
 }
 
 @keyframes pulse {
